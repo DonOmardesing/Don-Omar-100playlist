@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Don Omar Radio — 100 Playlists</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:#fff;text-align:center;overflow-x:hidden;font-family:Montserrat,sans-serif}
+.hdr{width:100vw;height:70vw;margin:0 0 0 50%;transform:translateX(-50%);overflow:hidden;background:#000}
+.hdr img{width:100%;height:100%;object-fit:cover;display:block}
+.luxo{max-width:760px;margin:10px auto 6px;padding:0 18px;font-weight:600;font-size:13px;line-height:1.35;color:#e8e6e1}
+.luxo .line2{display:block;color:#00c8ff;margin-top:3px}
+.desliza{font-weight:900;font-size:20px;letter-spacing:.18em;text-transform:uppercase;margin:7px 0 8px;display:flex;align-items:center;justify-content:center;gap:18px}
+.desliza span{color:#ffd24a;font-size:30px;text-shadow:0 0 7px #ffd24a}
+.play-section{border-top:5px double #0a84ff;border-bottom:5px double #0a84ff;padding:12px 0 22px;background:#000}
+.carousel-wrap{width:100%;max-width:620px;margin:0 auto;padding:0 8px}
+.carousel-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:2px 0 5px}
+.carousel-arrow{width:58px;height:50px;border:1px solid #ffd24a;border-radius:15px;background:#03070b;color:#ffd24a;font-size:32px;cursor:pointer}
+.carousel-count{font-family:"Bebas Neue",cursive;font-size:20px;letter-spacing:2px}
+.carousel-viewport{overflow:hidden;border-radius:18px;touch-action:pan-y}
+.carousel-track{display:flex;transition:transform .28s ease;will-change:transform}
+.carousel-slide{min-width:100%;padding:2px}
+.carousel-card{border:2px solid #0a84ff;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#08131e,#02070b);box-shadow:0 0 22px rgba(0,132,255,.20),0 10px 30px rgba(0,0,0,.55)}
+.carousel-cover{position:relative;aspect-ratio:1/1;overflow:hidden;background:#02060b}
+.carousel-cover img{width:100%;height:100%;object-fit:cover;display:block}
+.carousel-number{position:absolute;top:10px;left:10px;z-index:2;background:rgba(0,0,0,.82);border:1px solid #00a8ff;border-radius:8px;padding:5px 9px;color:#00c8ff;font-family:"Bebas Neue",cursive;font-size:20px}
+.carousel-info{padding:8px 10px 10px;text-align:center;background:#05090d}
+.carousel-name{font-family:"Bebas Neue",cursive;font-size:22px;letter-spacing:1px;line-height:1.05;color:#fff;min-height:38px;display:flex;align-items:center;justify-content:center}
+.listen-main{display:inline-flex;align-items:center;justify-content:center;margin-top:7px;min-width:135px;padding:9px 18px;border:1px solid #00c8ff;border-radius:999px;background:#031a2b;color:#00c8ff;font-size:13px;font-weight:900;letter-spacing:1.5px;cursor:pointer}
+.collection-label{color:#00c8ff;font-size:13px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;margin:18px 0 8px}
+.ft{padding:22px 16px 32px;border-top:3px solid #0066cc;margin-top:16px;font-size:12px;color:#9fb0bf}
+@media(max-width:480px){
+.hdr{height:70vw}
+.luxo{margin-top:7px;font-size:12px}
+.desliza{font-size:19px;margin:5px 0 6px;gap:16px}
+.desliza span{font-size:28px}
+.carousel-arrow{width:52px;height:46px;font-size:29px}
+}
+</style>
+</head>
+<body>
+<div class="hdr"><img src="https://i.postimg.cc/RCLjZk7c/Don-Omar-Radio-4K.png"></div>
+<div class="luxo"><div>35 años coleccionando música, recuerdos y emociones.</div><div class="line2">Esta colección es tuya. Disfrútala.</div></div>
+<div class="desliza"><span>←</span><span>DESLIZA</span><span>→</span></div>
+<div class="play-section">
+<div class="carousel-wrap">
+<div class="carousel-controls">
+<button class="carousel-arrow" id="prevPlaylist">‹</button>
+<div class="carousel-count" id="playlistCount">01 / 100</div>
+<button class="carousel-arrow" id="nextPlaylist">›</button>
+</div>
+<div class="carousel-viewport" id="playlistViewport"><div class="carousel-track" id="playlistTrack"></div></div>
+</div>
+<div class="collection-label">COLECCIÓN DON OMAR RADIO SESSIONS</div>
+</div>
+<div class="ft">DonOmarDesing 2026<br>Todos los derechos reservados</div>
+<script>
+const PLAYLIST_DATA=[{"n": 1, "name": "OMAR LISTENING EXPERIENCES", "url": "https://open.spotify.com/playlist/2tk34IKcVjTx8aidXZF4HL"}, {"n": 2, "name": "D TODITO EXTREME VOL 1", "url": "https://open.spotify.com/playlist/4R2aVNVO3tUtwnuBf4osmJ"}, {"n": 3, "name": "D TODITO EXTREME VOL 2", "url": "https://open.spotify.com/playlist/5CeIPLwwsfJDIVqitQkN24"}, {"n": 4, "name": "D TODITO EXTREME VOL 3", "url": "https://open.spotify.com/playlist/07m6qpObVXCnpE9QwWfNlU"}, {"n": 5, "name": "D TODITO EXTREME VOL 4", "url": "https://open.spotify.com/playlist/6etRLTC3lEJW8C0u9CRavN"}, {"n": 6, "name": "D TODITO EXTREME VOL 5", "url": "https://open.spotify.com/playlist/4xhIewzCyN1Mo0ZHMbgsoE"}, {"n": 7, "name": "D TODITO EXTREME VOL 6", "url": "https://open.spotify.com/playlist/6lLAWN4eD3ZBISACS6tX26"}, {"n": 8, "name": "EN ESPAÑOL VOL 1", "url": "https://open.spotify.com/playlist/1PhlSkv6hMjtAy0Rb9yZiU"}, {"n": 9, "name": "EN ESPAÑOL VOL 2", "url": "https://open.spotify.com/playlist/16PURhC7xPwDThOpupCpYI"}, {"n": 10, "name": "EN ESPAÑOL VOL 3", "url": "https://open.spotify.com/playlist/4hyK6ap2RfocqUm0OrP3CO"}, {"n": 11, "name": "EN ESPAÑOL VOL 4", "url": "https://open.spotify.com/playlist/1WLha6DftZ1JqE2qKhUjdf"}, {"n": 12, "name": "EN ESPAÑOL ROCK VOL 5", "url": "https://open.spotify.com/playlist/3d8ZRIdxbMHReJ5uAd3xsG"}, {"n": 13, "name": "EN ESPAÑOL VOL 6", "url": "https://open.spotify.com/playlist/0WvM0a829C9QSigeVTTNhz"}, {"n": 14, "name": "EN ESPAÑOL VOL 7", "url": "https://open.spotify.com/playlist/0KcyIjmIUuvNiNguT1Xajb"}, {"n": 15, "name": "GOTHIC ROCK", "url": "https://open.spotify.com/playlist/1FHcYS8b8n3SaoHWq6XElp"}, {"n": 16, "name": "JAZZ & BLUES VOL 1", "url": "https://open.spotify.com/playlist/1nTc4kw55ib4ruYAhrb3hw"}, {"n": 17, "name": "JAZZ & BLUES VOL 2", "url": "https://open.spotify.com/playlist/5o80VZeIAI2TeH99SN8zr0"}, {"n": 18, "name": "JAZZ & BLUES VOL 3", "url": "https://open.spotify.com/playlist/0RkMpM8KZ2gRR3uhBJEOd2"}, {"n": 19, "name": "JAZZ & BLUES VOL 4", "url": "https://open.spotify.com/playlist/5Y94vU6FyoT1wz4tNd2ffb"}, {"n": 20, "name": "JAZZ & BLUES VOL 5", "url": "https://open.spotify.com/playlist/1K5vaa641aK52YAm6mGRo3"}, {"n": 21, "name": "JAZZ & BLUES VOL 6", "url": "https://open.spotify.com/playlist/5XCxnfSA5hsI41CEr4QnM6"}, {"n": 22, "name": "JAZZ & BLUES VOL 7", "url": "https://open.spotify.com/playlist/43oP6KP5pPJKpYM9C2mexH"}, {"n": 23, "name": "JAZZ & BLUES VOL 8", "url": "https://open.spotify.com/playlist/1PFcs9ABnQ7aXnAbFfyXGI"}, {"n": 24, "name": "SLOW TECNO BEATS", "url": "https://open.spotify.com/playlist/69qW23fBUmeHxnv1E0fve4"}, {"n": 25, "name": "MÚSICA CLÁSICA", "url": "https://open.spotify.com/playlist/2AtZda1IWZ6I7a3lwo3qpf"}, {"n": 26, "name": "CHILLOUT COVERS", "url": "https://open.spotify.com/playlist/0qrdlJsvqzcEJ0pG2HxoAP"}, {"n": 27, "name": "DEEP HOUSE VOL 1", "url": "https://open.spotify.com/playlist/3GB57XvyTnJMaV5jQZzJBR"}, {"n": 28, "name": "DEEP HOUSE VOL 2", "url": "https://open.spotify.com/playlist/0e9KxtXkGK1V4zjlr3G07D"}, {"n": 29, "name": "MINIMAL TECNO", "url": "https://open.spotify.com/playlist/13JT3ltN39gKetE9K1pShw"}, {"n": 30, "name": "ROCK ME VOL 1", "url": "https://open.spotify.com/playlist/7nMIklnMjw8gZ5UCYU5kOH"}, {"n": 31, "name": "ROCK ME VOL 2", "url": "https://open.spotify.com/playlist/2MFCP2u6gF4ef7x5XhDxfD"}, {"n": 32, "name": "ROCK ME VOL 3", "url": "https://open.spotify.com/playlist/24H30sy8YzDLwB1pZX6Idh"}, {"n": 33, "name": "ROCK ME VOL 4", "url": "https://open.spotify.com/playlist/6tT6TZnSrkKqS98g25EhLM"}, {"n": 34, "name": "ROCK ME VOL 5", "url": "https://open.spotify.com/playlist/7pTBsRARNIkeaWBCorTc8Y"}, {"n": 35, "name": "ROCK ME VOL 6", "url": "https://open.spotify.com/playlist/5GV68RwiAIbrf5u9qkkCqa"}, {"n": 36, "name": "ROCK ME VOL 7", "url": "https://open.spotify.com/playlist/2t0ivIx0OjJVlEj31yrURF"}, {"n": 37, "name": "ROCK ME VOL 8", "url": "https://open.spotify.com/playlist/7ldb38L5I4kxUdVRWaGUK5"}, {"n": 38, "name": "ROCK ME VOL 9", "url": "https://open.spotify.com/playlist/5gGX8BBX5TA2lk2Bcarya3"}, {"n": 39, "name": "ROCK ME VOL 10", "url": "https://open.spotify.com/playlist/2N2ggWDHNn5mgv74GAjpyM"}, {"n": 40, "name": "ROCK ME VOL 11", "url": "https://open.spotify.com/playlist/3TYkAVFPtm9ZWuEwypHKZz"}, {"n": 41, "name": "ROCK ME VOL 12", "url": "https://open.spotify.com/playlist/5AVcvnINcDlzXCHGgiI7ZS"}, {"n": 42, "name": "ROCK ME VOL 13", "url": "https://open.spotify.com/playlist/462wVKutAiV5gi7AAl4xKZ"}, {"n": 43, "name": "ROCK ME VOL 14", "url": "https://open.spotify.com/playlist/03PYL5pGloZsl8G3nHF6Me"}, {"n": 44, "name": "ROCK ME VOL 15", "url": "https://open.spotify.com/playlist/0ZQTNUR50sOrBvDW8gkuZL"}, {"n": 45, "name": "ROCK ME VOL 16", "url": "https://open.spotify.com/playlist/7yw1Zqb0hOtyrwjlPPfmdt"}, {"n": 46, "name": "RAP FOREVER", "url": "https://open.spotify.com/playlist/4yugmuVvpp6EkvGoVP4Hqi"}, {"n": 47, "name": "JUST REGUEE", "url": "https://open.spotify.com/playlist/53YPAtzeqkIG1ZrAePp14J"}, {"n": 48, "name": "SALSA X ME VOL 1", "url": "https://open.spotify.com/playlist/76WTw6qzBx1uwDos9SKtTd"}, {"n": 49, "name": "SALSA X ME VOL 2", "url": "https://open.spotify.com/playlist/3obzbQcv19vqaq74HZnOnN"}, {"n": 50, "name": "SALSA X ME VOL 3", "url": "https://open.spotify.com/playlist/0hf4NZhLIDuRZOWDBBHPQ6"}, {"n": 51, "name": "SALSA X ME VOL 4", "url": "https://open.spotify.com/playlist/7oTw3v7LZRlGLDWaZRjeZS"}, {"n": 52, "name": "SALSA X ME VOL 5", "url": "https://open.spotify.com/playlist/3H91ZgUAlHLcZnCOqIubSX"}, {"n": 53, "name": "SALSA X ME VOL 6", "url": "https://open.spotify.com/playlist/6pSaKJWcSrHQJLkn7D5bSf"}, {"n": 54, "name": "SALSA X ME VOL 7", "url": "https://open.spotify.com/playlist/6BaNoc7OZHgAEThbnKFjqu"}, {"n": 55, "name": "SALSA X ME VOL 8", "url": "https://open.spotify.com/playlist/3Ormr4ezSPrxlx8G3FbVcI"}, {"n": 56, "name": "SALSA X ME VOL 9", "url": "https://open.spotify.com/playlist/54k7LP6yoKAV45FvoCCKGK"}, {"n": 57, "name": "NUEVA PLAYLIST 57", "url": "https://open.spotify.com/playlist/4z115JzPnBq13Co05Uhqf6"}, {"n": 58, "name": "NUEVA PLAYLIST 58", "url": "https://open.spotify.com/playlist/5j7MqRAGT7wan07UGv615X"}, {"n": 59, "name": "CONCIERTOS EN VIVO INGLES", "url": "https://open.spotify.com/playlist/5liuw8I80hl9HyNY3AwiZG"}, {"n": 60, "name": "AFTER NANANA — GLOBAL CLUB", "url": "https://open.spotify.com/playlist/2DB8aDScedMe23xBKrOoUK"}, {"n": 61, "name": "ARION LUXURY LOUNGE COLLECTION", "url": "https://open.spotify.com/album/5PAeGBpIbDqbOOUZjZqwMK"}, {"n": 62, "name": "NUEVA PLAYLIST 62", "url": "https://open.spotify.com/playlist/2P8i5fc5X3kAuNNMH2dJCD"}, {"n": 63, "name": "ELECTRONICA HOUSE MIX", "url": "https://open.spotify.com/playlist/37i9dQZF1EIdxwrH5wQhtc"}, {"n": 64, "name": "THE GENTLEMEN OF VOCAL JAZZ", "url": "https://open.spotify.com/playlist/0aU5HXuQqOLT7AsU3uJJN6"}, {"n": 65, "name": "PLAYLIST NUEVA 65", "url": "https://open.spotify.com/playlist/6RidFEe8Fi31ZvhYg9evsn"}, {"n": 66, "name": "PLAYLIST NUEVA 66", "url": "https://open.spotify.com/playlist/3gEv4T37sUiHiEJOqW1pHe"}, {"n": 67, "name": "PLAYLIST NUEVA 67", "url": "https://open.spotify.com/playlist/1ynE7xam4kZ0vA3KNCaaPG"}, {"n": 68, "name": "PLAYLIST NUEVA 68", "url": "https://open.spotify.com/playlist/0mAS2nwUZVBbDof6PH6g7d"}, {"n": 69, "name": "PLAYLIST NUEVA 69", "url": "https://open.spotify.com/playlist/2qkcZywjPtF9fzU7eAwpLz"}, {"n": 70, "name": "PLAYLIST NUEVA 70", "url": "https://open.spotify.com/playlist/01fL0N7kq1ZKs3yCPSPY87"}, {"n": 71, "name": "PLAYLIST NUEVA 71", "url": "https://open.spotify.com/playlist/4I9nsQ4YaS8KG4FnEyjlos"}, {"n": 72, "name": "PLAYLIST NUEVA 72", "url": "https://open.spotify.com/playlist/249PAGOPoPYaz8dxMBw6QW"}, {"n": 73, "name": "PLAYLIST NUEVA 73", "url": "https://open.spotify.com/playlist/1HCnqmMzuxmaSuI6cUaWwl"}, {"n": 74, "name": "PLAYLIST NUEVA 74", "url": "https://open.spotify.com/playlist/1zsNtpfwYEPAPfRUurdgJn"}, {"n": 75, "name": "PLAYLIST NUEVA 75", "url": "https://open.spotify.com/playlist/64YUE6nVTmyDvhHSxcJqjM"}, {"n": 76, "name": "PLAYLIST NUEVA 76", "url": "https://open.spotify.com/playlist/4FO0aPuNgnkPbOwnMGTiOb"}, {"n": 77, "name": "PLAYLIST NUEVA 77", "url": "https://open.spotify.com/playlist/7pJuZTChk4JDZQV8Bhj6CQ"}, {"n": 78, "name": "PLAYLIST NUEVA 78", "url": "https://open.spotify.com/playlist/7DsREkG2HAHqROmpr9KB8E"}, {"n": 79, "name": "PLAYLIST NUEVA 79", "url": "https://open.spotify.com/playlist/63FDBH6Adjor4HuSzu0pBe"}, {"n": 80, "name": "PLAYLIST NUEVA 80", "url": "https://open.spotify.com/playlist/5iz7E2qPUAReGg1T6E086u"}, {"n": 81, "name": "PLAYLIST NUEVA 81", "url": "https://open.spotify.com/playlist/3REM0lEOfc06CmlBA85QRC"}, {"n": 82, "name": "PLAYLIST NUEVA 82", "url": "https://open.spotify.com/playlist/3Y061S2LhKjVuYrKuyRHUC"}, {"n": 83, "name": "PLAYLIST NUEVA 83", "url": "https://open.spotify.com/playlist/2BEgpbPSIEHhj3x8eWqwIO"}, {"n": 84, "name": "PLAYLIST NUEVA 84", "url": "https://open.spotify.com/playlist/0zhStubU9Q1jjRx2lMHxIg"}, {"n": 85, "name": "PLAYLIST NUEVA 85", "url": "https://open.spotify.com/playlist/37i9dQZF1E8KzQvimkQ1BI"}, {"n": 86, "name": "PLAYLIST NUEVA 86", "url": "https://open.spotify.com/playlist/37i9dQZF1E8PTakVyM3uqw"}, {"n": 87, "name": "PLAYLIST NUEVA 87", "url": "https://open.spotify.com/playlist/37i9dQZF1E8KFitsnpSwlT"}, {"n": 88, "name": "PLAYLIST NUEVA 88", "url": "https://open.spotify.com/playlist/3mW1tGh25uqPzC2lpuEhnX"}, {"n": 89, "name": "PLAYLIST NUEVA 89", "url": "https://open.spotify.com/playlist/6TeBQl2vzPkk4xmtC5yiHq"}, {"n": 90, "name": "PLAYLIST NUEVA 90", "url": "https://open.spotify.com/playlist/37i9dQZF1DZ06evO1SVXaM"}];
+const track=document.getElementById('playlistTrack');
+const count=document.getElementById('playlistCount');
+let current=0;
+function makeSlide(item){
+ const slide=document.createElement('div'); slide.className='carousel-slide';
+ slide.innerHTML='<div class="carousel-card"><div class="carousel-cover"><span class="carousel-number">'+String(item.n).padStart(2,'0')+'</span><img alt="'+item.name.replace(/"/g,'&quot;')+'" loading="lazy"></div><div class="carousel-info"><div class="carousel-name">'+item.name+'</div><button class="listen-main">▶ ESCUCHAR</button></div></div>';
+ slide.querySelector('.listen-main').onclick=()=>window.open(item.url,'_blank');
+ const img=slide.querySelector('img');
+ fetch('https://open.spotify.com/oembed?url='+encodeURIComponent(item.url)).then(r=>r.ok?r.json():Promise.reject()).then(d=>{if(d.thumbnail_url)img.src=d.thumbnail_url}).catch(()=>{});
+ return slide;
+}
+for(let i=0;i<100;i++){
+ if(PLAYLIST_DATA[i]) track.appendChild(makeSlide(PLAYLIST_DATA[i]));
+ else {
+  const s=document.createElement('div');s.className='carousel-slide';
+  s.innerHTML='<div class="carousel-card"><div class="carousel-cover"><span class="carousel-number">'+String(i+1).padStart(2,'0')+'</span><div style="height:100%;display:flex;align-items:center;justify-content:center;font-family:Bebas Neue;font-size:30px;color:#778b9d">PRÓXIMAMENTE</div></div><div class="carousel-info"><div class="carousel-name">PLAYLIST '+String(i+1).padStart(2,'0')+'</div><button class="listen-main" disabled>PRÓXIMAMENTE</button></div></div>';
+  track.appendChild(s);
+ }
+}
+function go(n){current=(n+100)%100;track.style.transform='translateX(-'+current*100+'%)';count.textContent=String(current+1).padStart(2,'0')+' / 100';}
+document.getElementById('prevPlaylist').onclick=()=>go(current-1);
+document.getElementById('nextPlaylist').onclick=()=>go(current+1);
+let sx=0,sy=0,v=document.getElementById('playlistViewport');
+v.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});
+v.addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))go(current+(dx<0?1:-1))},{passive:true});
+go(0);
+</script>
+</body>
+</html>
